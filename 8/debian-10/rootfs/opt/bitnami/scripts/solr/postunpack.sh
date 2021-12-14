@@ -26,4 +26,4 @@ done
 replace_in_file "$SOLR_BIN_DIR"/solr.in.sh "#SOLR_JAVA_HOME=\"\"" "SOLR_JAVA_HOME=$SOLR_JAVA_HOME"
 replace_in_file "$SOLR_BIN_DIR"/solr.in.sh "#SOLR_PID_DIR=" "SOLR_PID_DIR=$SOLR_PID_DIR"
 replace_in_file "$SOLR_BIN_DIR"/solr.in.sh "#SOLR_LOGS_DIR=logs" "SOLR_LOGS_DIR=$SOLR_LOGS_DIR"
-
+echo "SOLR_OPTS=\"\$SOLR_OPTS -Dlog4j2.formatMsgNoLookups=true\"" >> "$SOLR_BIN_DIR"/solr.in.sh
